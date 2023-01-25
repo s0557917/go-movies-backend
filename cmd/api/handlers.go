@@ -36,7 +36,7 @@ func (app *application) AllMovies(w http.ResponseWriter, r *http.Request) {
 	rdTwo, _ := time.Parse("2006-01-02", "1981-06-12")
 
 	movies := []models.Movie{
-		models.Movie{
+		{
 			ID:          1,
 			Title:       "Highlander",
 			ReleaseDate: rdOne,
@@ -46,7 +46,7 @@ func (app *application) AllMovies(w http.ResponseWriter, r *http.Request) {
 			CreatedAt:   time.Now(),
 			UpdatedAt:   time.Now(),
 		},
-		models.Movie{
+		{
 			ID:          2,
 			Title:       "Raiders of the Lost Ark",
 			ReleaseDate: rdTwo,
